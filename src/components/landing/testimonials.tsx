@@ -3,9 +3,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Image from "next/image";
 
 const testimonials = [
-  { quote: "ChemTrade Edge revolutionized our procurement process. Their reliability and pricing are unmatched.", name: "Jane Doe", company: "PharmaCorp", logo: "https://placehold.co/100x40.png", hint: "company logo" },
+  { quote: "hike corporation revolutionized our procurement process. Their reliability and pricing are unmatched.", name: "Jane Doe", company: "PharmaCorp", logo: "https://placehold.co/100x40.png", hint: "company logo" },
   { quote: "The quality of chemicals and the seamless logistics have made them our most trusted partner.", name: "John Smith", company: "Innovate Labs", logo: "https://placehold.co/100x40.png", hint: "tech logo" },
-  { quote: "We've seen a 15% reduction in costs and a more stable supply chain since we switched to ChemTrade Edge.", name: "Samantha Bee", company: "AgroSolutions", logo: "https://placehold.co/100x40.png", hint: "nature logo" },
+  { quote: "We've seen a 15% reduction in costs and a more stable supply chain since we switched to hike corporation.", name: "Samantha Bee", company: "AgroSolutions", logo: "https://placehold.co/100x40.png", hint: "nature logo" },
 ];
 
 export function Testimonials() {

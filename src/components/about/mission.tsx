@@ -18,7 +18,7 @@ export function Mission() {
             Our Story
           </h2>
           <p className="text-foreground/80 md:text-lg">
-            Founded in 2018, ChemTrade Edge was born from a desire to modernize
+            Founded in 2018, hike corporation was born from a desire to modernize
             the traditionally opaque chemical distribution industry. Our founders,
             veterans of the chemical and tech sectors, saw an opportunity to
             leverage technology to create a more connected and efficient

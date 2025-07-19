@@ -9,7 +9,7 @@ export function Hero() {
           Reliable Chemical Sourcing for the Modern Enterprise
         </h1>
         <p className="mx-auto mt-6 max-w-[700px] text-foreground/80 md:text-xl">
-          ChemTrade Edge provides a seamless procurement platform for
+          hike corporation provides a seamless procurement platform for
           high-purity chemicals, ensuring supply chain stability and
           competitive pricing for your business.
         </p>
