@@ -10,7 +10,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-12 md:py-24">
+    <section id="testimonials" className="bg-secondary py-16 md:py-24">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Trusted by Industry Leaders</h2>

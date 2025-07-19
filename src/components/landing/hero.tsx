@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-20 md:py-32 bg-primary/5">
       <div className="container text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl/none">
           Reliable Chemical Sourcing for the Modern Enterprise
@@ -13,9 +13,14 @@ export function Hero() {
           high-purity chemicals, ensuring supply chain stability and
           competitive pricing for your business.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center gap-4">
           <Link href="/#products">
             <Button size="lg">Explore Products</Button>
+          </Link>
+          <Link href="/contact">
+            <Button size="lg" variant="outline">
+              Contact Sales
+            </Button>
           </Link>
         </div>
       </div>
