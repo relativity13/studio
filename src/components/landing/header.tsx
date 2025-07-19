@@ -19,8 +19,8 @@ export function Header() {
           <Link href="/#products" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Products
           </Link>
-          <Link href="/#testimonials" className="text-foreground/60 transition-colors hover:text-foreground/80">
-            Testimonials
+          <Link href="/contact" className="text-foreground/60 transition-colors hover:text-foreground/80">
+            Contact
           </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">

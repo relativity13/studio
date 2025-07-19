@@ -1,17 +1,13 @@
-import { Cta } from "@/components/landing/cta";
 import { Footer } from "@/components/landing/footer";
 import { Header } from "@/components/landing/header";
-import { Hero } from "@/components/landing/hero";
-import { Products } from "@/components/landing/products";
+import { ContactForm } from "@/components/contact/contact-form";
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <Hero />
-        <Products />
-        <Cta />
+        <ContactForm />
       </main>
       <Footer />
     </div>
