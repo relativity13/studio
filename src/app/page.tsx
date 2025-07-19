@@ -15,12 +15,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <div id="products">
-          <Products />
-        </div>
         <div id="about">
           <AboutHero />
           <Mission />
+        </div>
+        <div id="products">
+          <Products />
         </div>
         <div id="request-product">
           <RequestProductForm />
