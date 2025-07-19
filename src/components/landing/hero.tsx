@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24">
       <div className="container text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl/none">
           Reliable Chemical Sourcing for the Modern Enterprise
         </h1>
-        <p className="mx-auto mt-6 max-w-[700px] text-foreground/80 md:text-xl">
+        <p className="mx-auto mt-6 max-w-[700px] text-lg text-foreground/80 md:text-xl">
           hike corporation provides a seamless procurement platform for
           high-purity chemicals, ensuring supply chain stability and
           competitive pricing for your business.

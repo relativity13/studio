@@ -8,7 +8,7 @@ export function Cta() {
         <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">
           Ready to Optimize Your Chemical Supply Chain?
         </h2>
-        <p className="mx-auto mt-4 max-w-[600px] text-foreground/80 md:text-xl">
+        <p className="mx-auto mt-4 max-w-[600px] text-lg text-foreground/80 md:text-xl">
           Contact us today to get a custom quote and learn how we can support
           your enterprise needs.
         </p>

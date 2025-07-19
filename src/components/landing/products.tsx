@@ -10,15 +10,15 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-card py-12 md:py-24">
+    <section id="products" className="bg-card py-16 md:py-24">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Our Top Products</h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-foreground/80 md:text-lg">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
             High-quality chemicals available for bulk enterprise orders.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <Card key={product.name} className="overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg">
               <CardHeader className="p-0">
