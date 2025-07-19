@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Cta() {
   return (
@@ -12,7 +13,9 @@ export function Cta() {
           your enterprise needs.
         </p>
         <div className="mt-8">
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Request to buy</Button>
+          <Link href="/contact">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Contact Us</Button>
+          </Link>
         </div>
       </div>
     </section>

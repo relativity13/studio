@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -13,7 +14,9 @@ export function Hero() {
           competitive pricing for your business.
         </p>
         <div className="mt-8">
-          <Button size="lg">Request to buy</Button>
+          <Link href="/#products">
+            <Button size="lg">Explore Products</Button>
+          </Link>
         </div>
       </div>
     </section>

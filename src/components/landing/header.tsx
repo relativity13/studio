@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { FlaskConical } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 export function Header() {
   return (
@@ -23,8 +25,27 @@ export function Header() {
             Contact
           </Link>
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button>Request to buy</Button>
+        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <nav className="flex flex-col space-y-4 pt-8">
+                <Link href="/about" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                  About Us
+                </Link>
+                <Link href="/#products" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                  Products
+                </Link>
+                <Link href="/contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                  Contact
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
