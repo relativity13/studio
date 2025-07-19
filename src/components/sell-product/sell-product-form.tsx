@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,34 +19,40 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+  productName: z.string().min(2, {
+    message: "Product name must be at least 2 characters.",
+  }),
+  companyName: z.string().min(2, {
+    message: "Company name must be at least 2 characters.",
   }),
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+  quantity: z.string().min(1, {
+    message: "Please specify the available quantity.",
   }),
+  specifications: z.string().optional(),
 });
 
-export function ContactForm() {
+export function SellProductForm() {
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      productName: "",
+      companyName: "",
       email: "",
-      message: "",
+      quantity: "",
+      specifications: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We will get back to you shortly.",
+      title: "Offer Sent!",
+      description: "Thank you for your product offer. We will review it and get back to you shortly.",
     });
     form.reset();
   }
@@ -55,10 +62,10 @@ export function ContactForm() {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
-            Contact Us
+            Sell Your Product
           </h1>
           <p className="mt-4 text-lg text-foreground/80 md:text-xl">
-            Have questions? We'd love to hear from you. Fill out the form below, and we'll get back to you as soon as possible.
+            Are you a supplier of high-quality chemicals? Fill out the form below to partner with us.
           </p>
         </div>
 
@@ -67,12 +74,25 @@ export function ContactForm() {
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
                 control={form.control}
-                name="name"
+                name="productName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Product Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your Name" {...field} />
+                      <Input placeholder="e.g., Sodium Bicarbonate" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="companyName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Your Company Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Supplier Inc." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -83,9 +103,22 @@ export function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Contact Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
+                      <Input placeholder="your.email@supplier.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+               <FormField
+                control={form.control}
+                name="quantity"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Available Quantity (e.g., tons, kg)</FormLabel>
+                    <FormControl>
+                      <Input placeholder="e.g., 20 tons / month" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -93,13 +126,13 @@ export function ContactForm() {
               />
               <FormField
                 control={form.control}
-                name="message"
+                name="specifications"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>Product Specifications & Safety Data (Optional)</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="How can we help you?"
+                        placeholder="Please provide purity, grade, and links to safety data sheets."
                         className="min-h-[150px]"
                         {...field}
                       />
@@ -109,7 +142,7 @@ export function ContactForm() {
                 )}
               />
               <div className="text-center">
-                <Button type="submit" size="lg">Submit</Button>
+                <Button type="submit" size="lg">Submit Offer</Button>
               </div>
             </form>
           </Form>

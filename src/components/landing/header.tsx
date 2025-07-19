@@ -25,8 +25,11 @@ export function Header() {
           <Link href="/request-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Request a Product
           </Link>
+          <Link href="/sell-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
+            Sell Your Product
+          </Link>
           <Link href="/contact" className="text-foreground/60 transition-colors hover:text-foreground/80">
-            Contact
+            Contact Us
           </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4 md:hidden">
@@ -47,8 +50,11 @@ export function Header() {
                 <Link href="/request-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Request a Product
                 </Link>
+                <Link href="/sell-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                  Sell Your Product
+                </Link>
                 <Link href="/contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
-                  Contact
+                  Contact Us
                 </Link>
               </nav>
             </SheetContent>
