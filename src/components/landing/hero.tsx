@@ -17,7 +17,7 @@ export function Hero() {
           <Link href="/#products">
             <Button size="lg">Explore Products</Button>
           </Link>
-          <Link href="/contact">
+          <Link href="/#contact">
             <Button size="lg" variant="outline">
               Contact Sales
             </Button>

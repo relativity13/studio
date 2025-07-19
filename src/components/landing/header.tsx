@@ -16,19 +16,19 @@ export function Header() {
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="/about" className="text-foreground/60 transition-colors hover:text-foreground/80">
+          <Link href="/#about" className="text-foreground/60 transition-colors hover:text-foreground/80">
             About Us
           </Link>
           <Link href="/#products" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Products
           </Link>
-          <Link href="/request-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
+          <Link href="/#request-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Request a Product
           </Link>
-          <Link href="/sell-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
+          <Link href="/#sell-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Sell Your Product
           </Link>
-          <Link href="/contact" className="text-foreground/60 transition-colors hover:text-foreground/80">
+          <Link href="/#contact" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Contact Us
           </Link>
         </nav>
@@ -41,19 +41,19 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4 pt-8">
-                <Link href="/about" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#about" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   About Us
                 </Link>
                 <Link href="/#products" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Products
                 </Link>
-                <Link href="/request-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#request-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Request a Product
                 </Link>
-                <Link href="/sell-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#sell-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Sell Your Product
                 </Link>
-                <Link href="/contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Contact Us
                 </Link>
               </nav>
