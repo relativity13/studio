@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { FlaskConical } from "lucide-react";
 import Link from "next/link";
@@ -21,6 +22,9 @@ export function Header() {
           <Link href="/#products" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Products
           </Link>
+          <Link href="/request-product" className="text-foreground/60 transition-colors hover:text-foreground/80">
+            Request a Product
+          </Link>
           <Link href="/contact" className="text-foreground/60 transition-colors hover:text-foreground/80">
             Contact
           </Link>
@@ -39,6 +43,9 @@ export function Header() {
                 </Link>
                 <Link href="/#products" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Products
+                </Link>
+                <Link href="/request-product" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                  Request a Product
                 </Link>
                 <Link href="/contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Contact
