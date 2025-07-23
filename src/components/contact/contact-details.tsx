@@ -16,6 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { submitContactForm } from "@/ai/flows/contact-flow";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,6 +33,7 @@ const formSchema = z.object({
 
 export function ContactDetails() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -41,13 +44,32 @@ export function ContactDetails() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We will get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const result = await submitContactForm(values);
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We will get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: result.message || "There was a problem with your request.",
+        });
+      }
+    } catch (error) {
+       toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem with your request.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -101,7 +123,7 @@ export function ContactDetails() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="Your Name" {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -114,7 +136,7 @@ export function ContactDetails() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
+                        <Input placeholder="your.email@example.com" {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -131,13 +153,16 @@ export function ContactDetails() {
                           placeholder="How can we help you?"
                           className="min-h-[150px]"
                           {...field}
+                          disabled={isSubmitting}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg">Submit</Button>
+                <Button type="submit" size="lg" disabled={isSubmitting}>
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                </Button>
               </form>
             </Form>
           </div>
