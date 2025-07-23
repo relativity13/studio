@@ -10,9 +10,9 @@ const products = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-background py-16 md:py-24">
+    <section id="products" className="bg-background py-16 md:py-24 text-center">
       <div className="container">
-        <div className="mb-12 text-center">
+        <div className="mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Our Top Products</h2>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
             High-quality chemicals available for bulk enterprise orders.

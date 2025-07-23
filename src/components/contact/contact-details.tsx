@@ -73,9 +73,9 @@ export function ContactDetails() {
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 text-center">
       <div className="container">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-4xl">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
             Contact Us
           </h1>
@@ -85,8 +85,8 @@ export function ContactDetails() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-8">
-            <h2 className="font-headline text-2xl font-bold text-primary">
+          <div className="space-y-8 text-left">
+            <h2 className="font-headline text-2xl font-bold text-primary text-center">
               Our Information
             </h2>
             <div className="space-y-4">
@@ -113,7 +113,7 @@ export function ContactDetails() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="text-left">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
