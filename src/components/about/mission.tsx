@@ -1,6 +1,6 @@
 export function Mission() {
   return (
-    <section id="mission" className="bg-card py-16 md:py-24 text-center">
+    <section id="mission" className="bg-secondary/50 py-16 md:py-24">
       <div className="container grid gap-12 md:grid-cols-2 md:gap-16">
         <div className="space-y-4 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl">

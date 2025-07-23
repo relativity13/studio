@@ -73,9 +73,9 @@ export function ContactDetails() {
   }
 
   return (
-    <section className="py-16 md:py-24 text-center">
+    <section className="bg-secondary/50 py-16 md:py-24">
       <div className="container">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
             Contact Us
           </h1>
@@ -85,27 +85,27 @@ export function ContactDetails() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-8 text-center">
+          <div className="space-y-8 text-center md:text-left">
             <h2 className="font-headline text-2xl font-bold text-primary text-center">
               Our Information
             </h2>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4 justify-center">
-                <MapPin className="mt-1 h-6 w-6 text-accent" />
+            <div className="space-y-4 inline-block">
+              <div className="flex items-start gap-4">
+                <MapPin className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
                   <p className="text-foreground/80">123 Chemical Lane, Industry City, 12345</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 justify-center">
-                <Phone className="mt-1 h-6 w-6 text-accent" />
+              <div className="flex items-start gap-4">
+                <Phone className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
                   <p className="text-foreground/80">(123) 456-7890</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 justify-center">
-                <Mail className="mt-1 h-6 w-6 text-accent" />
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
                   <p className="text-foreground/80">contact@hikecorp.com</p>
@@ -113,7 +113,7 @@ export function ContactDetails() {
               </div>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-left">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
