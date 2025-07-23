@@ -85,26 +85,26 @@ export function ContactDetails() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-8 text-left">
+          <div className="space-y-8 text-center">
             <h2 className="font-headline text-2xl font-bold text-primary text-center">
               Our Information
             </h2>
             <div className="space-y-4">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 justify-center">
                 <MapPin className="mt-1 h-6 w-6 text-accent" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
                   <p className="text-foreground/80">123 Chemical Lane, Industry City, 12345</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 justify-center">
                 <Phone className="mt-1 h-6 w-6 text-accent" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
                   <p className="text-foreground/80">(123) 456-7890</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 justify-center">
                 <Mail className="mt-1 h-6 w-6 text-accent" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
@@ -113,7 +113,7 @@ export function ContactDetails() {
               </div>
             </div>
           </div>
-          <div className="text-left">
+          <div className="text-center">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField

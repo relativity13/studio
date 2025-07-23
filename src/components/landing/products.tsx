@@ -12,7 +12,7 @@ export function Products() {
   return (
     <section id="products" className="bg-background py-16 md:py-24 text-center">
       <div className="container">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Our Top Products</h2>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
             High-quality chemicals available for bulk enterprise orders.
@@ -20,7 +20,7 @@ export function Products() {
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <Card key={product.name} className="overflow-hidden transition-all hover:-translate-y-2 hover:shadow-2xl duration-300">
+            <Card key={product.name} className="overflow-hidden transition-all hover:-translate-y-2 hover:shadow-2xl duration-300 text-center">
               <CardHeader className="p-0">
                 <Image src={product.image} alt={product.name} width={600} height={400} className="h-48 w-full object-cover" data-ai-hint={product.hint} />
               </CardHeader>
