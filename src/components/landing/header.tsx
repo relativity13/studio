@@ -12,7 +12,7 @@ export function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center">
             <FlaskConical className="mr-2 h-6 w-6 text-primary" />
-            <span className="font-headline text-lg font-bold">hike corporation</span>
+            <span className="font-headline text-lg font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
