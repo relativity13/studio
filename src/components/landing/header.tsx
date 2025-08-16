@@ -8,14 +8,14 @@ import { Menu } from "lucide-react";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-20 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center">
-            <FlaskConical className="mr-2 h-6 w-6 text-primary" />
-            <span className="font-headline text-lg font-bold">HIKE CORPORATION</span>
+            <FlaskConical className="mr-2 h-8 w-8 text-primary" />
+            <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center space-x-8 text-base font-medium md:flex">
           <Link href="/#about" className="text-foreground/60 transition-colors hover:text-foreground/80">
             About Us
           </Link>
@@ -35,13 +35,13 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4 pt-8">
-                <Link href="/#about" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#about" className="text-xl font-medium text-foreground/80 transition-colors hover:text-foreground">
                   About Us
                 </Link>
-                <Link href="/#products" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#products" className="text-xl font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Products
                 </Link>
-                <Link href="/#contact" className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <Link href="/#contact" className="text-xl font-medium text-foreground/80 transition-colors hover:text-foreground">
                   Contact Us
                 </Link>
               </nav>
