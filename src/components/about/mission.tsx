@@ -6,7 +6,7 @@ export function Mission() {
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl">
             Our Mission
           </h2>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg text-foreground/80 text-justify">
             To empower enterprises by providing a transparent, reliable, and
             efficient platform for sourcing high-quality chemicals. We are
             committed to building resilient supply chains, fostering innovation,
@@ -17,7 +17,7 @@ export function Mission() {
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl">
             Our Story
           </h2>
-          <p className="text-lg text-foreground/80">
+          <p className="text-lg text-foreground/80 text-justify">
             Founded in 2018, hike corporation was born from a desire to modernize
             the traditionally opaque chemical distribution industry. Our founders,
             veterans of the chemical and tech sectors, saw an opportunity to

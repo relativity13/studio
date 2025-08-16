@@ -79,7 +79,7 @@ export function ContactDetails() {
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
             Contact Us
           </h1>
-          <p className="mt-4 text-lg text-foreground/80 md:text-xl">
+          <p className="mt-4 text-lg text-foreground/80 md:text-xl text-justify">
             Have questions? We'd love to hear from you. Fill out the form below, or reach out to us directly.
           </p>
         </div>
@@ -94,28 +94,28 @@ export function ContactDetails() {
                 <MapPin className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-foreground/80">123 Chemical Lane, Industry City, 12345</p>
+                  <p className="text-foreground/80 text-justify">123 Chemical Lane, Industry City, 12345</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-foreground/80">(123) 456-7890</p>
+                  <p className="text-foreground/80 text-justify">(123) 456-7890</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-foreground/80">contact@hikecorp.com</p>
+                  <p className="text-foreground/80 text-justify">contact@hikecorp.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <FileText className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">GST No.</h3>
-                  <p className="text-foreground/80">22AAAAA0000A1Z5</p>
+                  <p className="text-foreground/80 text-justify">22AAAAA0000A1Z5</p>
                 </div>
               </div>
             </div>

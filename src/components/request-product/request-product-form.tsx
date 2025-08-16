@@ -1,4 +1,3 @@
-
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -64,7 +63,7 @@ export function RequestProductForm() {
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
             Request a Product
           </h1>
-          <p className="mt-4 text-lg text-foreground/80 md:text-xl">
+          <p className="mt-4 text-lg text-foreground/80 md:text-xl text-justify">
             Can't find the chemical you're looking for? Fill out the form below, and our sourcing specialists will work to procure it for you.
           </p>
         </div>

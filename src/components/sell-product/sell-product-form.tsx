@@ -64,7 +64,7 @@ export function SellProductForm() {
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl">
             Sell Your Product
           </h1>
-          <p className="mt-4 text-lg text-foreground/80 md:text-xl">
+          <p className="mt-4 text-lg text-foreground/80 md:text-xl text-justify">
             Are you a supplier of high-quality chemicals? Fill out the form below to partner with us.
           </p>
         </div>
@@ -108,46 +108,4 @@ export function SellProductForm() {
                       <Input placeholder="your.email@supplier.com" {...field} />
                     </FormControl>
                     <FormMessage />
-                  </FormItem>
-                )}
-              />
-               <FormField
-                control={form.control}
-                name="quantity"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Available Quantity (e.g., tons, kg)</FormLabel>
-                    <FormControl>
-                      <Input placeholder="e.g., 20 tons / month" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="specifications"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Product Specifications & Safety Data (Optional)</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Please provide purity, grade, and links to safety data sheets."
-                        className="min-h-[150px]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="text-center">
-                <Button type="submit" size="lg">Submit Offer</Button>
-              </div>
-            </form>
-          </Form>
-        </div>
-      </div>
-    </section>
-  );
-}
+                  </Ite...

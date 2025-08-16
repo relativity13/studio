@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ export function Products() {
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Our Top Products</h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl text-justify">
             High-quality chemicals available for bulk enterprise orders.
           </p>
         </div>
