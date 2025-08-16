@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, FileText } from "lucide-react";
 import { submitContactForm } from "@/ai/flows/contact-flow";
 import { useState } from "react";
 
@@ -109,6 +109,13 @@ export function ContactDetails() {
                 <div>
                   <h3 className="font-semibold">Email</h3>
                   <p className="text-foreground/80">contact@hikecorp.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <FileText className="mt-1 h-6 w-6 text-primary" />
+                <div>
+                  <h3 className="font-semibold">GST No.</h3>
+                  <p className="text-foreground/80">22AAAAA0000A1Z5</p>
                 </div>
               </div>
             </div>
