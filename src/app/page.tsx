@@ -6,6 +6,7 @@ import { Products } from "@/components/landing/products";
 import { Mission } from "@/components/about/mission";
 import { ContactDetails } from "@/components/contact/contact-details";
 import { AboutHero } from "@/components/about/hero";
+import { Strength } from "@/components/landing/strength";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <div id="products">
           <Products />
         </div>
+        <Strength />
         <div id="contact">
           <ContactDetails />
         </div>
