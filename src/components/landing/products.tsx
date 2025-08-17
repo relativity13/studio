@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const products = [
-  { name: "Stearic Acid", image: "/images/stearic.jpg", hint: "chemical flask" },
-  { name: "Talcum Powder", image: "https://placehold.co/600x400.png", hint: "laboratory equipment" },
-  { name: "Dimethyl Pthalate", image: "https://placehold.co/600x400.png", hint: "science experiment" },
-  { name: "PVC Resin", image: "https://placehold.co/600x400.png", hint: "chemistry lab" },
+  { name: "Stearic Acid", image: "/images/stearic.jpg" },
+  { name: "Talcum Powder", image: "https://placehold.co/600x400.png" },
+  { name: "Dimethyl Pthalate", image: "https://placehold.co/600x400.png" },
+  { name: "PVC Resin", image: "https://placehold.co/600x400.png" },
 ];
 
 export function Products() {
@@ -23,7 +23,7 @@ export function Products() {
           {products.map((product) => (
             <Card key={product.name} className="overflow-hidden transition-all hover:shadow-xl duration-300 text-left border rounded-lg">
               <CardHeader className="p-0">
-                <Image src={product.image} alt={product.name} width={600} height={400} className="h-48 w-full object-cover" data-ai-hint={product.hint} />
+                <Image src={product.image} alt={product.name} width={600} height={400} className="h-48 w-full object-cover" />
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="font-headline mb-2 text-xl">{product.name}</CardTitle>
