@@ -8,7 +8,7 @@ export function Hero() {
         <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl/none uppercase">
           hike corporation
         </h1>
-        <p className="mx-auto mt-6 max-w-[700px] text-lg text-foreground/80 md:text-xl text-justify">
+        <p className="mx-auto mt-6 max-w-[600px] text-lg text-foreground/80 md:text-xl text-justify">
           Reliable Chemical Sourcing for the Modern Enterprise. We provide a seamless procurement platform for
           high-purity chemicals, ensuring supply chain stability and
           competitive pricing for your business.
