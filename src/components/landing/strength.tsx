@@ -9,11 +9,6 @@ const strengths = [
     icon: <ShieldCheck className="h-12 w-12 mx-auto text-primary" />,
   },
   {
-    title: "Customer Satisfaction",
-    description: "Our extensive network of partners ensures we can source and deliver chemicals anywhere in the world, efficiently.",
-    icon: <Globe className="h-12 w-12 mx-auto text-primary" />,
-  },
-  {
     title: "Competitive Pricing",
     description: "By optimizing our supply chain and leveraging bulk purchasing, we offer the most competitive prices in the market.",
     icon: <BadgeDollarSign className="h-12 w-12 mx-auto text-primary" />,
@@ -22,6 +17,11 @@ const strengths = [
     title: "On Time Delivery",
     description: "Our logistics team ensures timely and secure delivery of your orders, minimizing downtime for your operations.",
     icon: <Truck className="h-12 w-12 mx-auto text-primary" />,
+  },
+  {
+    title: "Customer Satisfaction",
+    description: "Our extensive network of partners ensures we can source and deliver chemicals anywhere in the world, efficiently.",
+    icon: <Globe className="h-12 w-12 mx-auto text-primary" />,
   },
 ];
 
