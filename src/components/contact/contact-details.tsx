@@ -89,7 +89,7 @@ export function ContactDetails() {
             <h2 className="font-headline text-2xl font-bold text-primary text-left">
               Our Information
             </h2>
-            <div className="space-y-4 inline-block">
+            <div className="flex flex-col space-y-8">
               <div className="flex items-start gap-4">
                 <MapPin className="mt-1 h-6 w-6 text-primary" />
                 <div>
