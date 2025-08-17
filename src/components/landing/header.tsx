@@ -15,7 +15,7 @@ export function Header() {
             <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
-        <nav className="hidden items-center space-x-8 text-base font-medium md:flex">
+        <nav className="hidden items-center space-x-12 text-lg font-medium md:flex">
           <Link href="/#about" className="text-foreground/60 transition-colors hover:text-foreground/80">
             About Us
           </Link>
