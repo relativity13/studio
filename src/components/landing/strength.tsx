@@ -31,9 +31,6 @@ export function Strength() {
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Our Strength</h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/80 md:text-xl text-justify">
-            Discover the core advantages of partnering with hike corporation for your chemical procurement needs.
-          </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {strengths.map((strength) => (
