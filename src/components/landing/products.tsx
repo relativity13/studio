@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const products = [
-  { name: "Sodium Hydroxide", image: "https://placehold.co/600x400.png", hint: "chemical flask" },
-  { name: "Sulfuric Acid", image: "https://placehold.co/600x400.png", hint: "laboratory equipment" },
-  { name: "Acetone", image: "https://placehold.co/600x400.png", hint: "science experiment" },
-  { name: "Methanol", image: "https://placehold.co/600x400.png", hint: "chemistry lab" },
+  { name: "Stearic Acid", image: "https://placehold.co/600x400.png", hint: "chemical flask" },
+  { name: "Talcum Powder", image: "https://placehold.co/600x400.png", hint: "laboratory equipment" },
+  { name: "Dimethyl Pthalate", image: "https://placehold.co/600x400.png", hint: "science experiment" },
+  { name: "PVC Resin", image: "https://placehold.co/600x400.png", hint: "chemistry lab" },
 ];
 
 export function Products() {
