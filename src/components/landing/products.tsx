@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const products = [
-  { name: "Sodium Hydroxide", price: "$1,200/ton", image: "https://placehold.co/600x400.png", hint: "chemical flask" },
-  { name: "Sulfuric Acid", price: "$850/ton", image: "https://placehold.co/600x400.png", hint: "laboratory equipment" },
-  { name: "Acetone", price: "$1,500/ton", image: "https://placehold.co/600x400.png", hint: "science experiment" },
-  { name: "Methanol", price: "$980/ton", image: "https://placehold.co/600x400.png", hint: "chemistry lab" },
+  { name: "Sodium Hydroxide", image: "https://placehold.co/600x400.png", hint: "chemical flask" },
+  { name: "Sulfuric Acid", image: "https://placehold.co/600x400.png", hint: "laboratory equipment" },
+  { name: "Acetone", image: "https://placehold.co/600x400.png", hint: "science experiment" },
+  { name: "Methanol", image: "https://placehold.co/600x400.png", hint: "chemistry lab" },
 ];
 
 export function Products() {
@@ -27,7 +27,6 @@ export function Products() {
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="font-headline mb-2 text-xl">{product.name}</CardTitle>
-                <p className="text-lg font-semibold text-primary">{product.price}</p>
               </CardContent>
             </Card>
           ))}

@@ -85,8 +85,8 @@ export function ContactDetails() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-8 text-center md:text-left">
-            <h2 className="font-headline text-2xl font-bold text-primary text-center">
+          <div className="space-y-8">
+            <h2 className="font-headline text-2xl font-bold text-primary text-left">
               Our Information
             </h2>
             <div className="space-y-4 inline-block">
@@ -121,6 +121,7 @@ export function ContactDetails() {
             </div>
           </div>
           <div className="text-left">
+            <h2 className="font-headline text-2xl font-bold text-primary mb-8">Contact Form</h2>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
