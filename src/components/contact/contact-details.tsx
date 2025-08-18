@@ -94,21 +94,21 @@ export function ContactDetails() {
                 <MapPin className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-foreground/80 text-justify">123 Chemical Lane, Industry City, 12345</p>
+                  <p className="text-foreground/80 text-justify">G-41, SECTOR-4, BAWANA INDUSTRIAL AREA, DSIIDC, DELHI-110039</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-foreground/80 text-justify">(123) 456-7890</p>
+                  <a href="tel:(+91) 8901111111" className="text-foreground/80 text-justify hover:underline">(+91) 8901111111</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-foreground/80 text-justify">contact@hikecorp.com</p>
+                  <a href="mailto:contact@hikecorp.com" className="text-foreground/80 text-justify hover:underline">contact@hikecorp.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
