@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const products = [
-  { name: "Stearic Acid", image: "/images/stearic.jpg" },
+  { name: "Stearic Acid", image: "/stearic.jpg" },
   { name: "Talcum Powder", image: "https://placehold.co/600x400.png" },
   { name: "Dimethyl Pthalate", image: "https://placehold.co/600x400.png" },
   { name: "PVC Resin", image: "https://placehold.co/600x400.png" },
