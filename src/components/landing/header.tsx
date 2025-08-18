@@ -16,16 +16,16 @@ export function Header() {
           </Link>
         </div>
         <nav className="hidden items-center space-x-12 text-lg font-medium md:flex">
-          <Link href="/" className="text-primary transition-colors hover:text-primary/80">
+          <Link href="/" className="text-foreground transition-colors hover:text-foreground/80">
             Home
           </Link>
-          <Link href="/#about" className="text-primary transition-colors hover:text-primary/80">
+          <Link href="/#about" className="text-foreground transition-colors hover:text-foreground/80">
             About Us
           </Link>
-          <Link href="/#products" className="text-primary transition-colors hover:text-primary/80">
+          <Link href="/#products" className="text-foreground transition-colors hover:text-foreground/80">
             Products
           </Link>
-          <Link href="/#contact" className="text-primary transition-colors hover:text-primary/80">
+          <Link href="/#contact" className="text-foreground transition-colors hover:text-foreground/80">
             Contact Us
           </Link>
         </nav>
@@ -38,16 +38,16 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4 pt-8">
-                 <Link href="/" className="text-xl font-medium text-primary transition-colors hover:text-primary/80">
+                 <Link href="/" className="text-xl font-medium text-foreground transition-colors hover:text-foreground/80">
                   Home
                 </Link>
-                <Link href="/#about" className="text-xl font-medium text-primary transition-colors hover:text-primary/80">
+                <Link href="/#about" className="text-xl font-medium text-foreground transition-colors hover:text-foreground/80">
                   About Us
                 </Link>
-                <Link href="/#products" className="text-xl font-medium text-primary transition-colors hover:text-primary/80">
+                <Link href="/#products" className="text-xl font-medium text-foreground transition-colors hover:text-foreground/80">
                   Products
                 </Link>
-                <Link href="/#contact" className="text-xl font-medium text-primary transition-colors hover:text-primary/80">
+                <Link href="/#contact" className="text-xl font-medium text-foreground transition-colors hover:text-foreground/80">
                   Contact Us
                 </Link>
               </nav>
