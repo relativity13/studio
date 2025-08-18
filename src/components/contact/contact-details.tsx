@@ -20,15 +20,9 @@ import { submitContactForm } from "@/ai/flows/contact-flow";
 import { useState } from "react";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
+  name: z.string(),
+  email: z.string(),
+  message: z.string(),
 });
 
 export function ContactDetails() {
@@ -101,14 +95,14 @@ export function ContactDetails() {
                 <Phone className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <a href="tel:(+91) 8901111111" className="text-foreground/80 text-justify hover:underline">(+91) 8901111111</a>
+                  <a href="tel:(+91) 8901111111" className="text-primary hover:underline">(+91) 8901111111</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <a href="mailto:contact@hikecorp.com" className="text-foreground/80 text-justify hover:underline">contact@hikecorp.com</a>
+                  <a href="mailto:hikecorp@gmail.com" className="text-primary hover:underline">hikecorp@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
