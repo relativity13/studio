@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/table";
 
 const products = [
-  { name: "Stearic Acid", cas: "57-11-4", brand: "Godrej", grade: "distric" },
-  { name: "Talcum Powder", cas: "14807-96-6", brand: "Golcha", grade: "rajat" },
+  { name: "Stearic Acid", cas: "57-11-4", brand: "Godrej", grade: "Distric" },
+  { name: "Talcum Powder", cas: "14807-96-6", brand: "Golcha", grade: "Rajat" },
   { name: "Dimethyl Phthalate", cas: "131-11-3", brand: "KLJ", grade: "Technical" },
   { name: "PVC Resin", cas: "9002-86-2", brand: "CGPC", grade: "H66" },
 ];
