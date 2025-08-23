@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/table";
 
 const products = [
-  { name: "Stearic Acid", cas: "57-11-4", formula: "C18H36O2", grade: "Industrial" },
-  { name: "Talcum Powder", cas: "14807-96-6", formula: "H2Mg3(SiO3)4", grade: "Cosmetic" },
-  { name: "Dimethyl Phthalate", cas: "131-11-3", formula: "C10H10O4", grade: "Technical" },
-  { name: "PVC Resin", cas: "9002-86-2", formula: "(C2H3Cl)n", grade: "Suspension" },
+  { name: "Stearic Acid", cas: "57-11-4", brand: "Godrej", grade: "Industrial" },
+  { name: "Talcum Powder", cas: "14807-96-6", brand: "Golcha", grade: "Cosmetic" },
+  { name: "Dimethyl Phthalate", cas: "131-11-3", brand: "KLJ", grade: "Technical" },
+  { name: "PVC Resin", cas: "9002-86-2", brand: "CGPC", grade: "Suspension" },
 ];
 
 export function Products() {
@@ -31,7 +31,7 @@ export function Products() {
               <TableRow>
                 <TableHead className="font-bold">Product Name</TableHead>
                 <TableHead className="font-bold">CAS Number</TableHead>
-                <TableHead className="font-bold">Formula</TableHead>
+                <TableHead className="font-bold">Brand</TableHead>
                 <TableHead className="font-bold">Grade</TableHead>
               </TableRow>
             </TableHeader>
@@ -40,7 +40,7 @@ export function Products() {
                 <TableRow key={product.name}>
                   <TableCell className="uppercase font-bold">{product.name}</TableCell>
                   <TableCell>{product.cas}</TableCell>
-                  <TableCell>{product.formula}</TableCell>
+                  <TableCell>{product.brand}</TableCell>
                   <TableCell>{product.grade}</TableCell>
                 </TableRow>
               ))}
