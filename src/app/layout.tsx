@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ChemTrade Edge',
-  description: 'Enterprise Chemical Procurement, Simplified.',
+  title: 'HIKE CORPORATION',
+  description: 'A Reliable Chemical Sourcing Company for the Modern Enterprises.',
 };
 
 export default function RootLayout({
