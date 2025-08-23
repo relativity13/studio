@@ -9,6 +9,9 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { Resend } from 'resend';
+import ContactFormEmail from '@/emails/contact-form-email';
+
 
 const ContactFormInputSchema = z.object({
   name: z.string().describe("The user's name."),
@@ -34,17 +37,38 @@ const contactFormSubmitFlow = ai.defineFlow(
     outputSchema: ContactFormOutputSchema,
   },
   async (input) => {
-    // In a real application, you would integrate with an email sending service like SendGrid or Resend.
-    // For this example, we'll just log the information to the console.
-    console.log(`New contact form submission:
-      Name: ${input.name}
-      Email: ${input.email}
-      Message: ${input.message}
-      (This would be sent to hikecorp@gmail.com)`);
-    
-    return {
-      success: true,
-      message: 'Your message has been sent successfully.',
-    };
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    try {
+      const { data, error } = await resend.emails.send({
+        from: 'Hike Corporation <onboarding@resend.dev>',
+        to: 'hikecorp@gmail.com',
+        subject: `New message from ${input.name}`,
+        react: ContactFormEmail({
+          name: input.name,
+          email: input.email,
+          message: input.message,
+        })
+      });
+
+      if (error) {
+        console.error('Resend error:', error);
+        return {
+          success: false,
+          message: 'There was an error sending your message. Please try again later.',
+        };
+      }
+
+      return {
+        success: true,
+        message: 'Your message has been sent successfully.',
+      };
+    } catch (error) {
+      console.error('Error sending email:', error);
+      return {
+        success: false,
+        message: 'There was a critical error. Please contact support.',
+      };
+    }
   }
 );
