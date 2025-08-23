@@ -1,15 +1,22 @@
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
         <div className="mr-8 flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="https://placehold.co/40x40.png"
+              alt="Hike Corporation logo"
+              width={40}
+              height={40}
+              data-ai-hint="logo"
+            />
             <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
