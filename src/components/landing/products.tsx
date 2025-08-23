@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 
 const products = [
-  { name: "Stearic Acid", brand: "Godrej,Adani", grade: "Distric, SAP,1843" ,Packaging: "25 kg"},
+  { name: "Stearic Acid", brand: "Godrej,Adani", grade: "Distric, SAP, 1843" ,Packaging: "25 kg"},
   { name: "Talcum Powder", brand: "Golcha", grade: "Rajat",Packaging: "25 kg" },
   { name: "Dimethyl Phthalate",  brand: "KLJ", grade: "KANATOL-100",Packaging: "250 kg drum" },
   { name: "PVC Resin", brand: "CGPC", grade: "H-66",Packaging: "25 kg" },
