@@ -23,7 +23,6 @@ const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
   message: z.string().min(1, { message: "Message is required." }),
-  access_key: z.string(),
 });
 
 export function ContactDetails() {
@@ -36,21 +35,23 @@ export function ContactDetails() {
       name: "",
       email: "",
       message: "",
-      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("message", values.message);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
+
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-        },
-        body: JSON.stringify(values),
+        body: formData,
       });
 
       const data = await response.json();
@@ -177,18 +178,6 @@ export function ContactDetails() {
                           {...field}
                           disabled={isSubmitting}
                         />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                 <FormField
-                  control={form.control}
-                  name="access_key"
-                  render={({ field }) => (
-                    <FormItem className="hidden">
-                      <FormControl>
-                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
