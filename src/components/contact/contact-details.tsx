@@ -50,20 +50,20 @@ export function ContactDetails() {
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {contactDetails.map((detail) => (
-            <Card key={detail.title} className="text-center transition-all hover:shadow-xl">
-              <CardHeader>
-                <div className="flex justify-center">{detail.icon}</div>
-              </CardHeader>
-              <CardContent>
-                <CardTitle className="font-headline text-xl">{detail.title}</CardTitle>
-                <div className="mt-2 text-foreground/80">
-                  {detail.href ? (
-                    <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      {detail.value}
-                    </a>
-                  ) : (
-                    <p>{detail.value}</p>
-                  )}
+            <Card key={detail.title} className="transition-all hover:shadow-xl">
+              <CardContent className="flex items-center gap-4 p-6">
+                <div>{detail.icon}</div>
+                <div className="flex-grow">
+                  <CardTitle className="font-headline text-xl">{detail.title}</CardTitle>
+                  <div className="mt-1 text-foreground/80">
+                    {detail.href ? (
+                      <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">
+                        {detail.value}
+                      </a>
+                    ) : (
+                      <p className="break-all">{detail.value}</p>
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
