@@ -18,7 +18,7 @@ const contactDetails = [
     {
     title: "WhatsApp",
     icon:  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.13.41.38.41.66v2.37c0 .34-.24.64-.57.71C12.68 18.23 9 14.54 9.5 10.1c.07-.33.37-.58.71-.58h2.37c.28 0 .53.16.66.41l.41 1.23c.14.42-.01.88-.38 1.15l-1.3 1.3c1.39 2.78 3.67 5.06 6.45 6.45l1.3-1.3c.27-.27.73-.42 1.15-.38l1.23.41zM20.12 3.88C18.43 2.19 16.3 1.5 14 1.5s-4.43.69-6.12 2.38c-3.37 3.37-3.37 8.86 0 12.23l2.08-2.08c-2.15-2.15-2.15-5.63 0-7.78l1.41-1.41c1.37-1.37 3.58-1.37 4.95 0l1.41 1.41c2.15 2.15 2.15 5.63 0 7.78l2.08 2.08c3.37-3.37 3.37-8.86 0-12.23z"></path></svg>,
-    value: "+91-8920912782",
+    value: "Chat on WhatsApp",
     href: "https://wa.me/918920912782",
   },
   {
@@ -57,11 +57,11 @@ export function ContactDetails() {
                   <CardTitle className="font-headline text-xl">{detail.title}</CardTitle>
                   <div className="mt-1 text-foreground/80">
                     {detail.href ? (
-                      <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">
+                      <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
                         {detail.value}
                       </a>
                     ) : (
-                      <p className="break-all">{detail.value}</p>
+                      <p>{detail.value}</p>
                     )}
                   </div>
                 </div>
