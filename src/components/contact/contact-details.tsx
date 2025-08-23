@@ -27,12 +27,6 @@ const contactDetails = [
     value: "hikecorp@gmail.com",
     href: "mailto:hikecorp@gmail.com",
   },
-  {
-    title: "Website",
-    icon: <Globe className="h-8 w-8 text-primary" />,
-    value: "www.hikecorporation.in",
-    href: "https://www.hikecorporation.in",
-  },
 ];
 
 export function ContactDetails() {
@@ -48,7 +42,7 @@ export function ContactDetails() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           {contactDetails.map((detail) => (
             <Card key={detail.title} className="transition-all hover:shadow-xl">
               <CardContent className="flex items-center gap-4 p-6">
