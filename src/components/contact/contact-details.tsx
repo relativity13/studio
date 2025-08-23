@@ -17,37 +17,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Globe } from "lucide-react";
-import { submitContactForm } from "@/ai/flows/contact-flow";
 import { useState } from "react";
 
 const formSchema = z.object({
-  name: z.string(),
-  email: z.string(),
-  message: z.string(),
+  name: z.string().min(1, { message: "Name is required." }),
+  email: z.string().email({ message: "Invalid email address." }),
+  message: z.string().min(1, { message: "Message is required." }),
+  access_key: z.string(),
 });
-
-function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M21 12.5V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4" />
-      <path d="M16 12.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3z" />
-      <path d="M20 12.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3z" />
-      <path d="m3 6 9 6 9-6" />
-    </svg>
-  );
-}
-
 
 export function ContactDetails() {
   const { toast } = useToast();
@@ -59,14 +36,26 @@ export function ContactDetails() {
       name: "",
       email: "",
       message: "",
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    
     try {
-      const result = await submitContactForm(values);
-      if (result.success) {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
         toast({
           title: "Message Sent!",
           description: "Thank you for contacting us. We will get back to you shortly.",
@@ -76,7 +65,7 @@ export function ContactDetails() {
         toast({
           variant: "destructive",
           title: "Uh oh! Something went wrong.",
-          description: result.message || "There was a problem with your request.",
+          description: data.message || "There was a problem with your request.",
         });
       }
     } catch (error) {
@@ -188,6 +177,18 @@ export function ContactDetails() {
                           {...field}
                           disabled={isSubmitting}
                         />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                 <FormField
+                  control={form.control}
+                  name="access_key"
+                  render={({ field }) => (
+                    <FormItem className="hidden">
+                      <FormControl>
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
