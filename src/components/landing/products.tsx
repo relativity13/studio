@@ -1,12 +1,18 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const products = [
-  { name: "Stearic Acid", image: "/stearic.jpg" },
-  { name: "Talcum Powder", image: "https://placehold.co/600x400.png" },
-  { name: "Dimethyl Pthalate", image: "https://placehold.co/600x400.png" },
-  { name: "PVC Resin", image: "https://placehold.co/600x400.png" },
+  { name: "Stearic Acid", cas: "57-11-4", formula: "C18H36O2", grade: "Industrial" },
+  { name: "Talcum Powder", cas: "14807-96-6", formula: "H2Mg3(SiO3)4", grade: "Cosmetic" },
+  { name: "Dimethyl Phthalate", cas: "131-11-3", formula: "C10H10O4", grade: "Technical" },
+  { name: "PVC Resin", cas: "9002-86-2", formula: "(C2H3Cl)n", grade: "Suspension" },
 ];
 
 export function Products() {
@@ -19,17 +25,27 @@ export function Products() {
             High-quality chemicals available for bulk enterprise orders.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
-            <Card key={product.name} className="overflow-hidden transition-all hover:shadow-xl duration-300 text-left border rounded-lg">
-              <CardHeader className="p-0">
-                <Image src={product.image} alt={product.name} width={600} height={400} className="h-48 w-full object-cover" />
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="font-headline mb-2 text-xl">{product.name}</CardTitle>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="overflow-hidden rounded-lg border">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="font-bold">Product Name</TableHead>
+                <TableHead className="font-bold">CAS Number</TableHead>
+                <TableHead className="font-bold">Formula</TableHead>
+                <TableHead className="font-bold">Grade</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {products.map((product) => (
+                <TableRow key={product.name}>
+                  <TableCell>{product.name}</TableCell>
+                  <TableCell>{product.cas}</TableCell>
+                  <TableCell>{product.formula}</TableCell>
+                  <TableCell>{product.grade}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       </div>
     </section>
