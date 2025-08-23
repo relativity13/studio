@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone, FileText } from "lucide-react";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { submitContactForm } from "@/ai/flows/contact-flow";
 import { useState } from "react";
 
@@ -88,14 +89,14 @@ export function ContactDetails() {
                 <MapPin className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Address</h3>
-                  <p className="text-foreground/80 text-justify">G-41, SECTOR-4, BAWANA INDUSTRIAL AREA, DSIIDC, DELHI-110039</p>
+                  <p className="text-foreground/80 text-justify">G-41, Sector-4, Bawana Industrial Area,DSIIDC, Delhi-110039</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <a href="tel:(+91) 8901111111" className="text-primary hover:underline">(+91) 8901111111</a>
+                  <a href="tel:+91-8920912782" className="text-primary hover:underline">+91-8920912782</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -106,10 +107,10 @@ export function ContactDetails() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <FileText className="mt-1 h-6 w-6 text-primary" />
+                <Globe className="mt-1 h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="font-semibold">GST No.</h3>
-                  <p className="text-foreground/80 text-justify">22AAAAA0000A1Z5</p>
+                  <h3 className="font-semibold">Website</h3>
+                  <a href="https://www.hikecorporation.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.hikecorporation.in</a>
                 </div>
               </div>
             </div>
