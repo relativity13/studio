@@ -38,11 +38,20 @@ const contactFormSubmitFlow = ai.defineFlow(
   },
   async (input) => {
     const resend = new Resend(process.env.RESEND_API_KEY);
+    const toEmail = process.env.RESEND_TO_EMAIL;
+
+    if (!toEmail) {
+      console.error('Resend "to" email is not configured. Please set RESEND_TO_EMAIL in your environment variables.');
+      return {
+        success: false,
+        message: 'The server is not configured to send emails correctly. Please contact support.',
+      };
+    }
 
     try {
       const { data, error } = await resend.emails.send({
         from: 'Hike Corporation <onboarding@resend.dev>',
-        to: 'hikecorp@gmail.com',
+        to: toEmail,
         subject: `New message from ${input.name}`,
         react: ContactFormEmail({
           name: input.name,
