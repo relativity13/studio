@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import Image from "next/image";
+import { Menu, Mountain } from "lucide-react";
 
 export function Header() {
   return (
@@ -10,13 +9,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <div className="mr-8 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="https://placehold.co/40x40.png"
-              alt="Hike Corporation logo"
-              width={40}
-              height={40}
-              data-ai-hint="logo"
-            />
+            <Mountain className="h-10 w-10 text-primary" />
             <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
