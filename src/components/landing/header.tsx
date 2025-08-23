@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { FlaskConical } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -11,7 +10,6 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <div className="mr-8 flex items-center">
           <Link href="/" className="flex items-center">
-            <FlaskConical className="mr-2 h-8 w-8 text-primary" />
             <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
