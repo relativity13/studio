@@ -9,11 +9,10 @@ import {
 } from "@/components/ui/table";
 
 const products = [
-  { name: "Stearic Acid", cas: "57-11-4", brand: "Godrej", grade: "Distric" },
-  { name: "Stearic Acid", cas: "57-11-4", brand: "Adani", grade: "SAP" },
-  { name: "Talcum Powder", cas: "14807-96-6", brand: "Golcha", grade: "Rajat" },
-  { name: "Dimethyl Phthalate", cas: "131-11-3", brand: "KLJ", grade: "Technical" },
-  { name: "PVC Resin", cas: "9002-86-2", brand: "CGPC", grade: "H66" },
+  { name: "Stearic Acid", brand: "Godrej,Adani", grade: "Distric, SAP,1843" ,Packaging: "25 kg"},
+  { name: "Talcum Powder", brand: "Golcha", grade: "Rajat",Packaging: "25 kg" },
+  { name: "Dimethyl Phthalate",  brand: "KLJ", grade: "KANATOL-100",Packaging: "250 kg drum" },
+  { name: "PVC Resin", brand: "CGPC", grade: "H-66",Packaging: "25 kg" },
 ];
 
 export function Products() {
@@ -31,18 +30,18 @@ export function Products() {
             <TableHeader>
               <TableRow>
                 <TableHead className="font-bold text-base p-6">Product Name</TableHead>
-                <TableHead className="font-bold text-base p-6">CAS Number</TableHead>
                 <TableHead className="font-bold text-base p-6">Brand</TableHead>
                 <TableHead className="font-bold text-base p-6">Grade</TableHead>
+                <TableHead className="font-bold text-base p-6">Packaging</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {products.map((product, index) => (
                 <TableRow key={`${product.name}-${index}`}>
                   <TableCell className="uppercase font-bold text-base p-6">{product.name}</TableCell>
-                  <TableCell className="text-base p-6">{product.cas}</TableCell>
                   <TableCell className="text-base p-6">{product.brand}</TableCell>
                   <TableCell className="text-base p-6">{product.grade}</TableCell>
+                  <TableCell className="text-base p-6">{product.Packaging}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
