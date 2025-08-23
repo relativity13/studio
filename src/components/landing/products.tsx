@@ -29,19 +29,19 @@ export function Products() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="font-bold">Product Name</TableHead>
-                <TableHead className="font-bold">CAS Number</TableHead>
-                <TableHead className="font-bold">Brand</TableHead>
-                <TableHead className="font-bold">Grade</TableHead>
+                <TableHead className="font-bold text-base p-6">Product Name</TableHead>
+                <TableHead className="font-bold text-base p-6">CAS Number</TableHead>
+                <TableHead className="font-bold text-base p-6">Brand</TableHead>
+                <TableHead className="font-bold text-base p-6">Grade</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {products.map((product) => (
                 <TableRow key={product.name}>
-                  <TableCell className="uppercase font-bold">{product.name}</TableCell>
-                  <TableCell>{product.cas}</TableCell>
-                  <TableCell>{product.brand}</TableCell>
-                  <TableCell>{product.grade}</TableCell>
+                  <TableCell className="uppercase font-bold text-base p-6">{product.name}</TableCell>
+                  <TableCell className="text-base p-6">{product.cas}</TableCell>
+                  <TableCell className="text-base p-6">{product.brand}</TableCell>
+                  <TableCell className="text-base p-6">{product.grade}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
