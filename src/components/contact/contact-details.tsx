@@ -51,7 +51,7 @@ export function ContactDetails() {
                   <CardTitle className="font-headline text-xl">{detail.title}</CardTitle>
                   <div className="mt-1 text-foreground/80">
                     {detail.href ? (
-                      <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      <a href={detail.href} target="_blank" rel="noopener noreferrer" className={`hover:underline ${detail.title === 'WhatsApp' ? 'text-blue-600' : ''}`}>
                         {detail.value}
                       </a>
                     ) : (
