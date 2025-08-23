@@ -1,85 +1,9 @@
 
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Globe } from "lucide-react";
-import { useState } from "react";
-
-const formSchema = z.object({
-  name: z.string().min(1, { message: "Name is required." }),
-  email: z.string().email({ message: "Invalid email address." }),
-  message: z.string().min(1, { message: "Message is required." }),
-});
 
 export function ContactDetails() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    
-    const formData = new FormData();
-    formData.append("name", values.name);
-    formData.append("email", values.email);
-    formData.append("message", values.message);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
-
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We will get back to you shortly.",
-        });
-        form.reset();
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Uh oh! Something went wrong.",
-          description: data.message || "There was a problem with your request.",
-        });
-      }
-    } catch (error) {
-       toast({
-        variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: "There was a problem with your request.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
   return (
     <section className="bg-secondary/50 py-16 md:py-24">
       <div className="container">
@@ -88,11 +12,11 @@ export function ContactDetails() {
             Contact Us
           </h1>
           <p className="mt-4 text-lg text-foreground/80 md:text-xl text-justify">
-            Have questions? We'd love to hear from you. Fill out the form below, or reach out to us directly.
+            Have questions? We'd love to hear from you. Reach out to us directly.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+        <div className="mt-12 flex justify-center">
           <div className="space-y-8">
             <h2 className="font-headline text-2xl font-bold text-primary text-left">
               Our Information
@@ -134,60 +58,6 @@ export function ContactDetails() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="text-left">
-            <h2 className="font-headline text-2xl font-bold text-primary mb-8">Contact Form</h2>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Name" {...field} disabled={isSubmitting} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} disabled={isSubmitting} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="How can we help you?"
-                          className="min-h-[150px]"
-                          {...field}
-                          disabled={isSubmitting}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" size="lg" disabled={isSubmitting}>
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
-                </Button>
-              </form>
-            </Form>
           </div>
         </div>
       </div>
