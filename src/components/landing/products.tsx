@@ -38,7 +38,7 @@ export function Products() {
             <TableBody>
               {products.map((product) => (
                 <TableRow key={product.name}>
-                  <TableCell>{product.name}</TableCell>
+                  <TableCell className="uppercase font-bold">{product.name}</TableCell>
                   <TableCell>{product.cas}</TableCell>
                   <TableCell>{product.formula}</TableCell>
                   <TableCell>{product.grade}</TableCell>
