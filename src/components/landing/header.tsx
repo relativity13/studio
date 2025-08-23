@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export function Header() {
   return (
@@ -9,7 +9,6 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <div className="mr-8 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Mountain className="h-10 w-10 text-primary" />
             <span className="font-headline text-2xl font-bold">HIKE CORPORATION</span>
           </Link>
         </div>
