@@ -2,8 +2,16 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'HIKE CORPORATION',
-  description: 'A Reliable Chemical Sourcing Company for the Modern Enterprises.',
+  title: 'Stearic Acid Supplier in Delhi | HIKE Corporation',
+  description: 'HIKE Corporation is a leading stearic acid supplier in Delhi, offering premium quality products from brands like Godrej and Adani for cosmetics, rubber, and plastics manufacturing. Contact us for bulk and wholesale orders.',
+  keywords: 'stearic acid, stearic acid supplier, stearic acid dealer, stearic acid Delhi, Godrej stearic acid, Adani stearic acid, chemical supplier',
+  openGraph: {
+    title: 'Stearic Acid Supplier in Delhi | HIKE Corporation',
+    description: 'Top supplier of high-quality stearic acid in Delhi NCR from leading brands. Reliable bulk and wholesale distribution for various industries.',
+    type: 'website',
+    url: 'https://www.hikecorporation.in', // Assuming this is the production URL
+    siteName: 'HIKE Corporation',
+  },
 };
 
 export default function RootLayout({
