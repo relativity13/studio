@@ -10,7 +10,7 @@ export function Hero() {
           HIKE corporation
         </h1>
         <p className="mx-auto mt-6 max-w-[600px] text-lg text-foreground/80 md:text-xl text-justify">
-          Our company is a trusted stearic acid supplier in Delhi, offering premium quality products from leading brands like Godrej, Adani, and Sheel Chand. We provide reliable bulk and wholesale supplies of stearic acid used in cosmetics, rubber, plastics, pharmaceuticals, and candle manufacturing. With competitive prices and assured quality, we are one of the most dependable stearic acid dealers in Delhi NCR for industries seeking consistent supply and timely delivery.
+          Our company is a trusted <strong>stearic acid supplier in Delhi</strong>, offering premium quality products from leading brands like Godrej, Adani, and Sheel Chand. We provide reliable bulk and wholesale supplies of stearic acid used in cosmetics, rubber, plastics, pharmaceuticals, and candle manufacturing. With competitive prices and assured quality, we are one of the most dependable stearic acid dealers in Delhi NCR for industries seeking consistent supply and timely delivery.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Link href="/#products">
